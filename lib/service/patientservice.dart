@@ -3,6 +3,38 @@ import 'package:http/http.dart' as http;
 
 import '../model/patientmodel.dart';
 class PatientApiService{
+  Future<List<Patient>> searchData(
+      String mobileNo
+      ) async{
+    var client=http.Client();
+    var ApiUrl=Uri.parse("http://192.168.1.4:3001/api/patientEntry/patientsearch");
+    var response=await client.post(ApiUrl,
+    headers: <String,String>{
+      "Content-Type" : "application/json; charset=UTF-8"
+    },
+      body: jsonEncode(<String,String>{
+        "mobileNo":mobileNo
+      }
+      )
+    );
+    if(response.statusCode==200)
+    {
+      return json.decode(response.body);
+    }
+    else
+    {
+      throw Exception("Failed to send data");
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
   Future<dynamic> sendData(
     String name,
     String mobileNo,
