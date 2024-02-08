@@ -56,6 +56,18 @@ class _MenuPageState extends State<MenuPage> {
                         style: TextStyle(fontSize: 20,
                         color: Colors.black87),))
                   ],
+                ),
+                SizedBox(height: 10,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(width: 17,),
+                    Icon(CupertinoIcons.search,size: 40,),
+                    TextButton(onPressed: (){},
+                        child: Text("Patient Search",
+                          style: TextStyle(fontSize: 20,
+                              color: Colors.black87),))
+                  ],
                 )
 
               ],
