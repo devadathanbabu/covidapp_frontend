@@ -1,4 +1,5 @@
 import 'package:covidapp/pages/add.dart';
+import 'package:covidapp/pages/view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -55,7 +56,11 @@ class _MenuPageState extends State<MenuPage> {
                   children: [
                     SizedBox(width: 17,),
                     Icon(CupertinoIcons.eye_fill,size: 40,),
-                    TextButton(onPressed: (){},
+                    TextButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:
+                          (context)=>ViewPage()));
+
+                    },
                         child: Text("Patient Details",
                         style: TextStyle(fontSize: 20,
                         color: Colors.black87),))

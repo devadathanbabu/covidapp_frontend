@@ -51,7 +51,9 @@ class _AddPageState extends State<AddPage> {
           child: Container(
             padding: EdgeInsets.all(40),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(height: 150,),
                 TextField(
                   controller:txt1,
                   decoration: InputDecoration(
@@ -97,6 +99,7 @@ class _AddPageState extends State<AddPage> {
                       border: OutlineInputBorder()
                   ),
                 ),
+                SizedBox(height: 10,),
                 SizedBox(
                   width: 200,
                   child: ElevatedButton(
